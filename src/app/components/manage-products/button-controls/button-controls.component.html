@@ -1,0 +1,6 @@
+<div style="display: flex; justify-content: flex-end;margin: 10px">
+    <button mat-mini-fab color="primary" (click)="onAddProduct()"><mat-icon>add</mat-icon></button>
+    <button mat-mini-fab color="primary" (click)="onEdit(selectedRows)" *ngIf="selectedRows.length == 1"><mat-icon>edit</mat-icon></button>
+    <button mat-mini-fab color="warn" (click)="onDelete(selectedRows)" *ngIf="selectedRows.length > 0"><mat-icon>delete</mat-icon></button>
+    <button mat-mini-fab color="primary" (click)="onFilter()"><mat-icon>search</mat-icon></button>
+</div>

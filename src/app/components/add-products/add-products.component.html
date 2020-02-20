@@ -1,0 +1,14 @@
+<form [formGroup]="formGroup" (submit)="onAddProduct()">
+    <div style="display: flex; flex-direction: column; margin-top: 20px; align-items: center;" >
+        <mat-form-field>
+            <input formControlName="name" matInput placeholder="Element name">
+        </mat-form-field>
+        <mat-form-field >
+            <input formControlName="weight" matInput placeholder="Weight">
+        </mat-form-field>
+        <mat-form-field >
+            <input formControlName="symbol" matInput placeholder="Symbol">
+        </mat-form-field>
+        <button type="submit" mat-raised-button style="margin-top:20px" color="primary">{{isEditMode ? "Update Element" : 'Add Element'}}</button>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<app-button-controls (addProduct)="onAddProduct()"
+                     (filter)="isFilterShow = !isFilterShow"
+                     [selectedRows]="selectedRows">
+</app-button-controls>
+<mat-form-field *ngIf="isFilterShow" appearance="outline" size="small">
+    <input matInput placeholder="Search Element name" (input)="onSearch($event.target.value)">
+</mat-form-field>
+<app-table *ngIf="(products$ | async).products as products" 
+            [products]="products"
+            (selectionChange)="selectionChanged($event)">
+</app-table>
